@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Money Manager</title>
+    <link rel="stylesheet" href="../Global/src/style.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Money Manager</h1>
+        <p>Write a JavaScript program that starts by asking for the initial amount of money available. </p>
+        <span>Options:</span>
+        <ol>
+            <li>Add money</li>
+            <li>Remove money</li>
+            <li>Exit</li>
+        </ol>
+        If the user chooses "Add money":
+        <ul>
+            <li>Asks for the amount to be removed;</li>
+            <li>Validates whether the value is valid (positive and doesn't exceed the balance);</li>
+            <li>Subtracts that value from the initial amount if it's valid;</li>
+            <li>Displays the menu again with the updated amount of money.</li>
+        </ul>
+        If the user chooses "Remove money":
+        <ul>
+            <li>Asks for the amount to be added;</li>
+            <li>Adds that value to the initial amount;</li>
+            <li>Displays the menu again with the updated amount of money.</li>
+        </ul>
+        If the user chooses "Exit":
+        <ul>
+            <li>Terminates the program.</li>
+        </ul>
+    </div>
+</body>
+
+</html>
