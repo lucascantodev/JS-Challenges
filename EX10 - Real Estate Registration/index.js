@@ -1,10 +1,11 @@
 const propertiesArr = [];
 
 const menu = () => {
-    const option = prompt('Choose an option:\n' +
-        '1. Add a new property\n' +
-        '2. List all properties\n' +
-        '3. Exit');
+    const option = prompt(`Choose an option:\n` +
+        `Properties: ${propertiesArr.length}\n` +
+        `1. Add a new property\n` +
+        `2. List all properties\n` +
+        `3. Exit`);
     return option;
 }
 
@@ -12,9 +13,9 @@ const registerProperty = () => {
     const propertyObj = {};
     const ownerName = prompt("Owner's name: ");
     propertyObj.ownerName = ownerName;
-    const bedroomsNumber = prompt("Number of bedrooms: ");
+    const bedroomsNumber = parseFloat(prompt("Number of bedrooms: "));
     propertyObj.bedroomsNumber = bedroomsNumber;
-    const bathroomsNumber = prompt("Number of bathrooms: ");
+    const bathroomsNumber = parseFloat(prompt("Number of bathrooms: "));
     propertyObj.bathroomsNumber = bathroomsNumber;
     const garage = prompt("Does it have a garage?");
     propertyObj.garage = garage;
