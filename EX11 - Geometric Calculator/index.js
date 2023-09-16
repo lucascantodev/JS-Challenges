@@ -1,4 +1,12 @@
-function menu() {
+function getInput(promptMessage) {
+    return parseFloat(prompt(promptMessage));
+}
+
+function displayResult(area) {
+    alert(`Area: ${area}`);
+}
+
+function getMenuChoice() {
     const option = prompt(`Choose an option:\n` +
         `1. Triangle area\n` +
         `2. Rectangle area\n` +
@@ -9,68 +17,68 @@ function menu() {
     return option;
 }
 
-function baseAndHeight() {
-    const base = prompt('Base:');
-    const height = prompt('Height:');
+function getBaseAndHeight() {
+    const base = getInput('Base:');
+    const height = getInput('Height:');
     return { base, height };
 }
 
-function largerAndSmallerBase() {
-    const smallerBase = prompt('Smaller base:');
-    const largerBase = prompt('Larger base:');
-    const height = prompt('Height:');
+function getLargerAndSmallerBase() {
+    const smallerBase = getInput('Smaller base:');
+    const largerBase = getInput('Larger base:');
+    const height = getInput('Height:');
     return { smallerBase, largerBase, height };
 }
 
-function triangleArea() {
-    const { base, height } = baseAndHeight();
+function calculateTriangleArea() {
+    const { base, height } = getBaseAndHeight();
     const area = base * height / 2;
-    alert(`Area: ${area}`);
+    return area;
 }
 
-function rectangleArea() {
-    const { base, height } = baseAndHeight();
+function calculateRectangleArea() {
+    const { base, height } = getBaseAndHeight();
     const area = base * height;
-    alert(`Area: ${area}`);
+    return area;
 }
 
-function squareArea() {
-    const side = prompt('Side:');
+function calculateSquareArea() {
+    const side = getInput('Side:');
     const area = side * side;
-    alert(`Area: ${area}`);
+    return area;
 }
 
-function trapezoidArea() {
-    const { smallerBase, largerBase, height } = largerAndSmallerBase();
+function calculateTrapezoidArea() {
+    const { smallerBase, largerBase, height } = getLargerAndSmallerBase();
     const area = (parseFloat(largerBase) + parseFloat(smallerBase)) * height / 2;
-    alert(`Area: ${area}`);
+    return area;
 }
 
-function circleArea() {
-    const radius = prompt('Radius:');
+function calculateCircleArea() {
+    const radius = getInput('Radius:');
     const area = Math.PI * radius * radius;
-    alert(`Area: ${area}`);
+    return area;
 }
 
 let menuChoice;
 
 do {
-    menuChoice = menu();
+    menuChoice = getMenuChoice();
     switch (menuChoice) {
         case '1':
-            triangleArea();
+            displayResult(calculateTriangleArea());
             break;
         case '2':
-            rectangleArea();
+            displayResult(calculateRectangleArea());
             break;
         case '3':
-            squareArea();
+            displayResult(calculateSquareArea());
             break;
         case '4':
-            trapezoidArea();
+            displayResult(calculateTrapezoidArea());
             break;
         case '5':
-            circleArea();
+            displayResult(calculateCircleArea());
             break;
         case '6':
             alert('Exiting program...');
