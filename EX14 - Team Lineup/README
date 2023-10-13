@@ -1,0 +1,14 @@
+Team Lineup
+Build a web page that allows you to assemble a lineup for a team of players. It should be possible to:
+
+Add a player to the lineup
+Provide the player's position in the team.
+Provide the player's name.
+Provide the player's jersey number.
+Have an "Add" button that asks the user to confirm the addition of that player and then inserts the information into a list on the page.
+After the player is added, the text fields should be cleared.
+Remove a player from the lineup
+Provide the player's jersey number.
+Have a "Remove" button that asks the user to confirm the removal of that player and then removes them from the list on the page.
+After the player is removed, the text field should be cleared.
+Tip: Remember that it is possible to access the text of an input through the value property.

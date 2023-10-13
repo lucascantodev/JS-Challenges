@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Lineup</title>
+    <link rel="stylesheet" href="../Global/src/styleDOM.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>Team Lineup</h1>
+    <h4>~Instructions on README~</h4>
+
+    <div class="container">
+        <h2>Player's Section</h2>
+        <section id="add">
+            <h3>Add Player</h3>
+            <p>
+                <label for="position">Position: </label>
+                <input type="text" id="position">
+
+                <label for="name">Name: </label>
+                <input type="text" id="name">
+
+                <label for="number">Number</label>
+                <input type="text" id="number">
+
+                <button onclick="addPlayer()">Add Player</button>
+            </p>
+        </section>
+
+        <section id="remove">
+            <h3>Remove Player</h3>
+            <p>
+                <label for="numberToRemove">Number: </label>
+                <input type="number" id="numberToRemove">
+                <button onclick="removePlayer()">Remove Player</button>
+            </p>
+        </section>
+        
+        <h2>Team:</h2>
+        <ul id="team-list"></ul>
+    </div>
+</body>
+
+</html>
